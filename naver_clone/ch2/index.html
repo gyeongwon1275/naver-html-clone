@@ -21,11 +21,16 @@
             <span>해피빈</span>
 
             <div id="header-search">
-                <h1>
-                    <a href="https://www.naver.com"><span>눼이버</span>    </a>
-                </h1>
-<!-- 여러 종류의 클래스를 적용하고 싶으면 클래스 이름을 띄어쓰기로 넣으면 됨  -->
-<!-- <h2 class="fun cool sexy"> => fun cool sexy 클래스가 적용-->
+                <!--  -->
+                <!-- h1, span 에 하이퍼 링크를 걸기 위해 a 안에 넣음 -->
+                <!-- text-decoration: none 밑줄 등 text 에 붙어있는 디자인 제거 -->
+                <a href="https://www.naver.com" style="text-decoration: none; vertical-align: middle;">
+                    <h1>
+                        <span>눼이버</span>
+                    </h1>
+                </a>
+                <!-- 여러 종류의 클래스를 적용하고 싶으면 클래스 이름을 띄어쓰기로 넣으면 됨  -->
+                <!-- <h2 class="fun cool sexy"> => fun cool sexy 클래스가 적용-->
                 <h2 class="blind">
                     검색창
                 </h2>
@@ -35,8 +40,9 @@
                         검색
                     </legend>
                     <input type="text">
-                    <button class="blind">
-                        검색!
+                    <button>
+                        <span class="blind">검색!</span>
+                        <span id="search-image"></span>
                     </button>
                 </fieldset>
             </div>
