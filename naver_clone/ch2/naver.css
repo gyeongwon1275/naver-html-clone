@@ -1,0 +1,94 @@
+/* 선택자 -> html 의 tag 를 선택  */
+
+/* 사용하는 이유 : 특정 tag 의 디자인을 관리하려고 */
+
+/* cascade => 덮어씌우다!
+부모의 속성을 자식이 가진다. 
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+/* 만약 header nav main 에 CSS 적용할 때는
+태그 명도 같이 써 줘야 함! 
+
+header#header-center{
+
+    border: 2px solid darkblue; 
+    margin: 0 auto; width: 1080px;
+}
+*/
+
+.blind {
+
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin:  -1px;
+    width: 1px;
+    height: 1px;
+}
+
+
+#header-center{
+    
+    border: 2px solid darkblue; 
+    /* px? -> 상대적인 단위
+    우저 모니터에 따라 달라진다. 
+    콘솔창에서 screen.width screen.height 로 px 를 알 수 있다.   
+        m, kg -> 절대단위 
+    */
+    /* display: block; 일 때만 margin 을 사용해 가운데 정렬가능 */
+    /* display:inline-block 는 margin 을 가지지 않기 때문! */
+    /* inline => block 과 달리 컨텐츠의 크기만큼만 너비차지 */
+    /* inline 은 width height 지정 못함, 빈 공간이 없음  */
+    /* block => 너비 전체 차지 */
+    margin: 0 auto; 
+    width: 1080px;
+
+}
+
+/* id가 header-search 인 div 의 자식인 h1  */
+div#header-search > h1{
+
+width: 200px;
+/* display: block; => margin 을 가진다.  */
+display: inline-block;
+width: 198px;
+height: 48px;
+background-image: url("./sp_search.png");
+
+
+/* background-position: (가로방향위치) (세로방향위치); */
+/* 네이버 로고와 같이 딸려온 이미지 보이지 않게 위치 조정함 */
+background-position: -4px -10px;
+/* vertical-align: middle;
+position: relative;
+top: -6px; */
+/* text-indent -> text 들여쓰기 ex tab 느낌 */
+text-indent: 100%;
+/* overflow: hidden; => 컨텐츠가 원래 지정된 크기를 벗어나면 보이지 않게 설정  */
+overflow: hidden;
+}
+/* 자손 전체 선택  */
+
+div#header-search > h1 > span {
+
+    display: none;
+
+}
+
+div#header-search h2{
+
+    /* display: none; => 화면상에서 공간을 차지하지 않고 안보이게 설정  */
+    
+    display: none;
+    /* visibility: hidden; => 화면상에서 공간을 차지하지만 보이지는 않게 설정  */
+} 
+
+    #header-search fieldset {
+        display: inline-block;
+        width: 520px;
+
+}
