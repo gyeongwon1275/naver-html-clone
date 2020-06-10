@@ -1,0 +1,83 @@
+<html lang="en">
+<!-- html element 만 추출하기 -->
+<!-- document.head.parentNode.removeChild(document.head); -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="u_skip">
+
+        <a href="https://www.naver.com/#newsstand">
+            <span>뉴스스탠드 바로가기</span>
+        </a>
+        <a href="https://www.naver.com/#themecast">
+            <span>주제별캐스트 바로가기</span>
+        </a>
+        <a href="https://www.naver.com/#timesquare">
+            <span>타임스퀘어 바로가기</span>
+        </a>
+        <a href="https://www.naver.com/#shopcast">
+            <span>쇼핑캐스트 바로가기</span>
+        </a>
+        <a href="https://www.naver.com/#account">
+            <span>로그인 바로가기</span>
+        </a>
+    </div>
+
+    <div id="wrap">
+        <!-- 네이버 웨일 광고 -->
+        <div id="NM_TOP_BANNER">
+            <div class="flex_area">
+                <a href="https://whale.naver.com/ko/?=main" class="link_banner">
+                    <i class="ico_naver_whale">
+                        <span class="blind">NAVER whale</span>
+                    </i>
+                    <img src="https://s.pstatic.net/static/www/img/uit/2020/img_whale_banner.483e9e.png" alt="없어 ㅅㅂ"
+                        width="150" height="48" class="bn_m">
+
+                    <p class="banner_text">
+                        인터넷의 새로운 시작!
+                        <strong class="bn_st">
+                            네이버웨일
+                        </strong>
+                        로 차원이 다른 웹서핑을 경험해보세요!
+                    </p>
+                    <button class="btn_close">3일 동안 보지 않기</button>
+                </a>
+
+
+            </div>
+        </div>
+        <!-- 네이버 웨일 광고 -->
+        <!-- 머리 -> header 몸통-> container 발 -> footer 로 설정 -->
+        <!-- header 에는 로고, 검색창 nav 메뉴가 위치 -->
+        <div id="header">
+            <div class="special_bg">
+                <div class="group_flex">
+                    <div class="logo_area">
+                        <!-- 로고가 제일 중요해서 h1 으로 설정한 듯 -->
+                        <h1 class="logo_default">
+                            <a href="https://www.naver.com/" class="logo_naver">
+                                <!-- 시각 장애인 위한 span 
+                                    때문에 클래스를 blind 로 설정함  -->
+                                <span class="blind">네이버</span>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="container"></div>
+        <div id="footer"></div>
+    </div>
+    <div id="adscript"></div>
+
+</body>
+
+</html>

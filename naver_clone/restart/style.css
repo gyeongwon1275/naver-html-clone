@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+
+/* https://www.youtube.com/watch?v=aiSClJhuKMY&list=PLcqDmjxt30Rsb8Zpgbemt-NaCOjr2WIUj&index=10 */
+
+/* element 에서 네이버가 css 어떻게 설정했는지 알 수 있다. */
+.flex_area {
+    /* 컨테이닝 블록 식별을 위해 position: relative 설정함 */
+    /* 전체 화면에서 margin: 0 auto;로 가운데 정렬을 하고 싶음 
+    /* 그러려면 flex area div 가 block 인 div 컨테이닝 블록 안에 위치해야 한다. */ 
+    
+    position: relative;
+    width: 1130px;
+    height: 48px;
+    /* 가운데 정렬 위함 */
+    margin: 0 auto;
+}
+
+.blind{
+    /* position 속성이 absolute인 경우, 
+    컨테이닝 블록은 position 속성 값이 static이 아닌(fixed, absolute, relative, sticky) 
+    가장 가까운 조상의 내부 여백 영역입니다. */
+    /* position 이 fixed, absolute, relative, 인 요소 컨테이닝 블록으로 들어가기 위해
+    position: absolute; 로 설정함  */
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+html body {
+    /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
+    padding: 0;
+    margin: 0;
+}
+
+button {
+
+    border: 0;
+    border-radius: 0;
+}
+
+#NM_TOP_BANNER{
+    border-bottom-color: #00cbae;
+    background-color: #00cbae;
+}
+.ico_naver_whale {
+
+    /* 왼쪽 정렬하면서 다른 요소에 공간을 주기위해서  */
+    float: left; 
+    width: 110px;
+    height: 30px;
+    /* 위와 공간을 띄우기 위해  */
+    margin-top: 9px;
+    /* 위로 붙일려고  */
+    vertical-align: top;
+    /* 이미지 따로 불러오면 속도 느려져서 bundling 해서 가져옴  */
+    background-image: url("https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png");
+    background-position: -276px -225px;
+    /* bundle img 반복 안하려고 */
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.bn_m{
+     /* position 이 fixed, absolute, relative, 인 요소 컨테이닝 블록으로 들어가기 위해
+    position: absolute; 로 설정함  */
+    position: absolute;
+    /* 컨테이닝 블록 요소 기준으로 0,260px 에 위치  */
+    top: 0;
+    left: 260px;
+}
+
+.link_banner{
+/* <a> 밑줄 없애기 용 */
+    text-decoration: none;
+}
+
+.bn_st{
+    /* strong 태그 밑줄용 */
+    text-decoration: underline;
+
+}
+
+.banner_text {
+
+    font-weight: 700;
+    /* 이미지와 떨어지려고 왼쪽에 마진 줌  */
+    margin-left: 417px;
+    color: #fff;
+
+    font-size: 13px;
+    /* 글자의 높이 지정 */
+    line-height: 49px;
+    /* 글자 자간 설정 */
+    letter-spacing: -.25px;
+    
+}
+
+.btn_close {
+    /* 배경색 투명 설정해서 div 색 반영되도록 */
+    background-color: transparent;
+    /* 글자색  */
+    color: #fff;
+    font-size: 11px;
+    /* containing block 으로 들어가 위치 설정  */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 49px;
+    cursor: pointer;
+    
+}
+
+
+

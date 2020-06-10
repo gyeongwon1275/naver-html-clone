@@ -51,7 +51,7 @@ header#header-center{
     콘솔창에서 screen.width screen.height 로 px 를 알 수 있다.   
         m, kg -> 절대단위 
     */
-    /* display: block; 일 때만 margin 을 사용해 가운데 정렬가능 */
+    /* display: block; 일 때만 margin 을 사용해 자식요소를 가운데 정렬가능 */
     /* display:inline-block 는 margin 을 가지지 않기 때문! */
     /* inline => block 과 달리 컨텐츠의 크기만큼만 너비차지 => 크기 지정 못함!! */
     /* inline 은 width height 지정 못함, 빈 공간이 없음  */

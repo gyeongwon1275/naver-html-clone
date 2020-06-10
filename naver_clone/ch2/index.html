@@ -14,11 +14,12 @@
     <header>
         <!-- div 너비가 100% 차지하면 가운데 정렬해도 의미 없음 -->
         <!-- div box 를 header 기준으로 가운데 정렬 -->
-        <div id="header-center">
-
-            <span>네이버를 시작페이지로!</span>
-            <span>쥬니어네이버</span>
-            <span>해피빈</span>
+        <div class="center-align">
+            <div id="header-top">
+                <span>네이버를 시작페이지로!</span>
+                <span>쥬니어네이버</span>
+                <span>해피빈</span>
+            </div>
 
             <div id="header-search">
                 <!--  -->
@@ -40,6 +41,8 @@
                         검색
                     </legend>
                     <input type="text">
+
+                    
                     <button>
                         <span class="blind">검색!</span>
                         <span id="search-image"></span>
@@ -51,23 +54,60 @@
     </header>
 
     <nav>
-        <div style="border: 2px solid darkblue;">
-
+        <div class="center-align relative">
+            <div id="search-ranking">
+                <h2 class="blind">실시간 검색어</h2>
+                <span id="rank-number">1</span>
+                <span id="rank-title">제로초</span>
+            </div>
             <ul>
-                <li>메일</li>
-                <li>까페</li>
-                <li>블로그</li>
-                <li>지식인</li>
-                <li>쇼핑</li>
-                <li>네이버페이</li>
-                <li>네이버쇼핑</li>
+                <li><a href="">
+                        <!-- 이미지와 text 를 같이 넣는 이유 -->
+                        <!-- 시각장애인을 위해서 -->
+                        <span></span>
+                        <span class="blind">메일</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">까페</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">블로그</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">지식인</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">쇼핑</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">네이버페이</span>
+                    </a>
+                </li>
+                <li><a href="">
+                        <span></span>
+                        <span class="blind">네이버쇼핑</span>
+                    </a>
+                </li>
             </ul>
+            <div class="nav-divider"></div>
 
-        </div>
+
     </nav>
 
-    <div style="border: 2px solid darkblue;">
-        <h2>실시간 검색어</h2>
+    <main>
+
+        <!-- 가운데 정렬을 하기 위해 div 안에 넣음 -->
+        <div class="center-align">
 
 
         <h3>연합뉴스</h3>
@@ -79,10 +119,25 @@
         </ol>
 
         <h3>언론사 목록</h3>
-
         <ul>
-            <li><img src="./과학동아.png" alt=""></li>
-            <li><img src="./한국일보.png" alt=""></li>
+            <li><img src="./과학동아.png" alt="과학동아" /></li>
+            <li><img src="./한국일보.png" alt="한국일보" /></li>
+            <li><img src="./osen.png" alt="osen" /></li>
+            <li><img src="./매일경제.png" alt="매일경제" /></li>
+            <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+            <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+            <li><img src="./과학동아.png" alt="과학동아" /></li>
+            <li><img src="./한국일보.png" alt="한국일보" /></li>
+            <li><img src="./osen.png" alt="osen" /></li>
+            <li><img src="./매일경제.png" alt="매일경제" /></li>
+            <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+            <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
+            <li><img src="./과학동아.png" alt="과학동아" /></li>
+            <li><img src="./한국일보.png" alt="한국일보" /></li>
+            <li><img src="./osen.png" alt="osen" /></li>
+            <li><img src="./매일경제.png" alt="매일경제" /></li>
+            <li><img src="./파이낸셜뉴스.png" alt="파이낸셜뉴스" /></li>
+            <li><img src="./한국경제TV.png" alt="한국경제TV" /></li>
         </ul>
 
 
@@ -92,8 +147,9 @@
         <h3>법률</h3>
         <h3>쇼핑</h3>
         <h6>쇼핑</h6>
-    </div>
 
+    </div>
+    </main>
     <div style="border: 2px solid darkblue;">
         공지사항
     </div>
@@ -105,6 +161,12 @@
 
     <div style="border: 2px solid darkblue;">
         회사소개
+    </div>
+
+    <div>
+        <button class="btn_theme" type="button" role="button">
+            <span class="blind">라이트 모드로보기</span>
+        </button>
     </div>
 
 </body>
