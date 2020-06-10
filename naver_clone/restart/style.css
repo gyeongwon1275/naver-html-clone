@@ -2,6 +2,25 @@
     box-sizing: border-box;
 }
 
+html body {
+    /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
+    padding: 0;
+    margin: 0;
+}
+
+button {
+
+    border: 0;
+    border-radius: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+    padding: 0;
+    margin: 0;
+
+}
+
 /* https://www.youtube.com/watch?v=aiSClJhuKMY&list=PLcqDmjxt30Rsb8Zpgbemt-NaCOjr2WIUj&index=10 */
 
 /* element 에서 네이버가 css 어떻게 설정했는지 알 수 있다. */
@@ -30,17 +49,7 @@
     height: 1px;
     margin: -1px;
 }
-html body {
-    /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
-    padding: 0;
-    margin: 0;
-}
 
-button {
-
-    border: 0;
-    border-radius: 0;
-}
 
 #NM_TOP_BANNER{
     border-bottom-color: #00cbae;
@@ -114,5 +123,99 @@ button {
     
 }
 
+.logo_naver {
+    /* 같은 라인에 검색창 위치해야 해서 inline-block */
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    vertical-align: top;
+    background-position: 0 -161px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
 
+.logo_default {
+    /* containing block 으로 들어가 위치 설정  */
+    position: absolute;
+    top: 50%;
+    left: -9px;
+    margin-top: -32px;
+}
+
+
+.logo_area {
+
+/* containing block 으로 들어가기 위해  */
+
+    position: relative;
+    height: 100%;
+}
+
+.group_flex {
+    /* containing block 으로 들어가기 위해  */
+    position: relative;
+    width: 1130px;
+    /* special_bg 안에서 100%  */
+    height: 100%;
+    /* special_bg div 안에서 가운데 정렬 위함 */
+    margin: 0 auto;
+    /* 우측 위치 조정 */
+    padding: 0 30px;
+
+}
+
+.special_bg{
+
+/* containing block 으로 들어가기 위해  */
+    position: relative;
+    height: 160px;
+    background-color: #fff;
+    border-bottom: 1px solid #e4e8eb;
+}
+
+.link_set{
+
+    font-size: 11px;
+    float: left;
+    color: #404040;
+    text-decoration: none;
+    line-height: 16px;
+
+}
+.link_jrnaver{
+    float: left;
+}
+
+.service_area{
+    position: absolute;
+    top: 12px;
+    right: 27px;
+}
+
+.ico_jrnaver{
+    /* display: inline 을 안하는 이유는 크기설정이 안됨 */
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    margin: 3px;
+    margin-left: 10px;
+    vertical-align: top;
+    background-position: -348px -260px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.ico_happybin{
+    display: inline-block;
+    width: 34px;
+    height: 11px;
+    margin: 3px 3px 2px ;
+    vertical-align: top;
+    background-position: -253px -323px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
 
