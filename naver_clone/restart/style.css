@@ -2,10 +2,20 @@
     box-sizing: border-box;
 }
 
-html body {
+html body, form, fieldset, input, button {
     /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
     padding: 0;
     margin: 0;
+}
+
+input {
+/* 기본 설정된 input 사각형이 보이지 않도록 함  */
+    border: 0;
+    border-radius: 0;
+}
+
+a{
+    text-decoration: none;
 }
 
 button {
@@ -219,3 +229,177 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 471px 442px;
 }
 
+#u_skip {
+
+    /* div 안의 a 태그 위치를 u_skip div 안에서 조정하기 위함  */
+position: relative;
+
+}
+
+#u_skip a {
+
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 138px;
+    text-align: center;
+    border: 1px solid #4ec53d;
+    background: #333;
+}
+
+#u_skip span {
+/* span 은 기본적으로 inline 이기 때문에 span 안의 글자크기를 조정해서
+    span 의 크기를 조정한다. 이를 사용해서 화면상에 보이지 않게 한다. 
+*/
+    font-size: 1px;
+}
+.green_window {
+
+    position: relative;
+    width: 582px;
+    height: 52px;
+    border: 2px solid #19ce60;
+    border-radius: 2px;
+
+}
+
+fieldset {
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#search {
+
+    position: absolute;
+    /* 네이버 로고 오른쪽에 붙이기 위한 위치 이동  */
+    top: 50%;
+    left: 268px;
+    margin-top: -27px;
+}
+
+.input_text {
+
+    /* 세로 가운데 정렬 */
+    /* 각종 가운데 정렬
+    https://so4869.tistory.com/23
+    */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    width: 444px;
+    height: 24px;
+    margin: 1px;
+    /* 검색어가 가운데 위치하도록 설정  */
+    padding: 13px;
+    color: #000;
+
+    background-color: #fff;
+    /* input 안에 텍스트 입력할 때 나오는 line 제거 */
+    outline: none;
+}
+
+.btn_submit {
+/* 가장 근처에 있는 relative 로 설정된 div 콘테이닝 블럭으로 들어감 
+
+green_window 박스안에서 위치 설정됨 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 56px;
+    border-radius: 0 2px 2px 0;
+    background-color: #19ce60;
+}
+
+.ico_search_submit {
+    /* 크기 설정하려고 */
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    /* 아이콘 이미지 위치설정 */
+    vertical-align: top;
+    background-position: -429px -172px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.ico_keyboard{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+    margin: -6px 0 0 -10px;
+    vertical-align: top;
+    background-position: -400px -276px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.msg_keybord{
+
+    position: absolute;
+    top: 42px;
+    left: -16px;
+    /* display: inline-block; */
+    display: none;
+    width: 68px;
+    height: 37px;
+    vertical-align: top;
+    background-position: -161px -115px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+
+#ke_kbd_btn {
+
+    position: absolute;
+    /* 세로 가운데 정렬 */
+    top: 0;
+    bottom: 0;
+    z-index: 400;
+    width: 36px;
+    right: 84px;
+}
+
+.btn_arw{
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 64px;
+    width: 22px;
+    
+}
+
+.ico_arr{
+
+    /* 위치 가운데로 조정  */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -5px;
+
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    vertical-align: top;
+    background-position: -429px -394px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+
+}

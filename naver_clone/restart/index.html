@@ -12,6 +12,9 @@
 <body>
 
     <div id="u_skip">
+        <!--u_skip div 를 relative 로 설정해서 콘테이닝 블록으로 설정   -->
+        <!-- 하위 요소으 ㅣposition 을 absolute 로 설정한 후 top 을 - 로 설정
+        해서 화면에는 있지만 사용자가 볼 수 없도록 함  -->
 
         <a href="https://www.naver.com/#newsstand">
             <span>뉴스스탠드 바로가기</span>
@@ -87,6 +90,50 @@
                                 <span class="blind">해피빈</span>
                             </i>
                         </a>
+                    </div>
+
+                    <div id="search">
+                        <form id="sform" action="">
+
+                            <fieldset>
+                                <legend class="blind">검색</legend>
+                                <!-- hidden 사용자에게는 보이지 않는 숨겨진 입력 필드를 정의합니다. -->
+                                <!-- 숨겨진 입력 필드는 폼 제출 시 사용자가 변경해서는 안 되는 데이터를 함께 보낼 때 유용하게 사용됩니다. -->
+                                <!-- 사용자가 따로 입력하지 않아도 데이터를 서버에 전송하기 위해 사용 -->
+                                <input type="hidden" value="경원">
+                                <div class="green_window">
+                                    <!-- 하지만, 시각적인 디자인이 label을 수용할 수 없을 때 
+                                        혹은 label로 식별되는 텍스트가 스크린에 없을 때 
+                                        혹은 label을 표시하는 것이 혼란스러울 수 있는 곳에서는 
+                                        title 만으로 폼 컨트롤을 식별하게 됩니다.-->
+                                    <!-- input 요소에 label 을 제공하지 못할 때 title 을 사용한다.  -->
+                                    <input id="query" type="text" title="검색어 입력" class="input_text">
+
+                                </div>
+                                <!-- type : submit 이유 => 검색어를 서버로 전달하고 검색결과 페이지로 이동시키기 위해  -->
+                                <button id="search_btn" type="submit" title="검색" class="btn_submit">
+                                    <span class="blind">
+                                        검색    
+                                    </span>
+                                    <span class="ico_search_submit">
+
+                                    </span>
+                                </button>
+                            </fieldset>
+                        </form>
+                        <!-- 키보드 고장나거나 없을 때 사용하기 위함 -->
+                        <a id="ke_kbd_btn" href="" role="button" class="btn_keyboard" title="한글입력기 열기">
+                            <span class="ico_keyboard"></span>
+                            <p class="msg_keybord" >
+                                <span class="blind">입력도구</span>
+                            </p>
+
+                        </a>
+
+                    <a href="" class="btn_arw">
+                        <span class="blind">자동완성펼치기</span>
+                        <span class="ico_arr"></span>
+                    </a>
                     </div>
                 </div>
             </div>
