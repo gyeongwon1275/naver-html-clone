@@ -2,12 +2,23 @@
     box-sizing: border-box;
 }
 
-html body, form, fieldset, input, button, ul, li {
+html body, form, fieldset, input, button, ul, li, iframe {
     /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
     padding: 0;
     margin: 0;
 }
 
+iframe {
+    vertical-align: top;
+    border: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 12px;
+    line-height: 16px;
+}
 i {
     font-style: unset;
 }
@@ -38,6 +49,27 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+#wrap {
+
+    overflow: hidden;
+    min-width: 1190px;
+}
+
+#container {
+
+    position: relative;
+    width: 1130px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    letter-spacing: -.2px;
+}
+
+#container:after{
+    display: table;
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
 .background {
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
     background-repeat: no-repeat;
@@ -65,8 +97,12 @@ h1, h2, h3, h4, h5, h6 {
     가장 가까운 조상의 내부 여백 영역입니다. */
     /* position 이 fixed, absolute, relative, 인 요소 컨테이닝 블록으로 들어가기 위해
     position: absolute; 로 설정함  */
+
+
     position: absolute;
     overflow: hidden;
+    /* clip 요소의 특정부분만 보여줌  */
+    /* 전체 0으로 설정해서 보이지 않게 설정함 */
     clip: rect(0 0 0 0);
     width: 1px;
     height: 1px;
@@ -416,6 +452,7 @@ green_window 박스안에서 위치 설정됨 */
 
     /* 자체적인 컨테이닝 블록을 형성하려고 */
     position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.12);
 
 }
 
@@ -434,7 +471,7 @@ green_window 박스안에서 위치 설정됨 */
 
 #gnb .list_nav{
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 30px;
     /* float 로 붕 띄워서 남은 공간을 다른 요소가 차지하게 함  */
@@ -455,11 +492,25 @@ green_window 박스안에서 위치 설정됨 */
     color: #000;
 
 }
+/* 다 18이 있는데 첫번째 자식만 마진이 0  */
 
 .nav_item {
     /* li 태그를 수평으로 나란히 정렬하기 위해  */
     float: left;
     margin-left: 18px;
+}
+
+.list_nav.type_fix li:first-child {
+
+    margin-left: 0;
+}
+.list_nav.NM_FAVORITE_LIST {
+
+    margin-left: 18px;
+}
+.list_nav.NM_FAVORITE_LIST li:first-child {
+
+    margin-left: 0;
 }
 
 .ico_mail.background {
@@ -485,20 +536,21 @@ green_window 박스안에서 위치 설정됨 */
 .group_nav{
 
     position: relative;
+    /* 박스를 넘어간 부분은 보이지 않게 */
+    overflow: hidden;
     padding: 11px 220px 11px 0;   
 
 }
 
 .btn_more {
-    position: absolute;
-    margin-left: 10px;
+    
     font-size: 13px;
     line-height: 30px;
     float: left;
     min-width: 70px;
+    margin-left: 17px;
     text-align: right;
     color: #202020;
-    margin-left: 17px;
 
 }
 
@@ -521,12 +573,13 @@ green_window 박스안에서 위치 설정됨 */
 
     position: absolute;
     top: 11px;
-    right: -35px;
+    right: 30px;
     overflow: hidden;
     width: 210px;
     height: 30px;
-
 }
+
+
 
 #rtk.group_keyword:after{
 
@@ -577,4 +630,228 @@ green_window 박스안에서 위치 설정됨 */
     letter-spacing: -.5px;
     text-overflow: clip;
     color: #505050;
+}
+
+.column_left{
+
+float: left;
+width: 750px;
+}
+
+.column_right{
+    float: right;
+    width: 350px;
+}
+
+.column_fix_wrap{
+    /* 컨테이닝 블록 형성하여 하위 요소 위치 조정하기 위함 */
+    position: relative;
+    width: 350px;
+    background-color: #fff;
+}
+
+
+.sc_login{
+    padding : 16px 16px 12px 17px;
+    border: 1px solid #dae1e6;
+    background-color: #f7f9fa;
+}
+
+.login_msg{
+    padding-left: 3px;
+    color: grey;
+}
+
+.link_login {
+
+    font-size: 13px;
+    font-weight: 700;
+    /* 
+    display: inline-block 
+    width :100% 
+    => display: block
+    => 가로 공간을 다 차지하기 위함 
+    */
+    display: block;
+
+    margin-top: 11px;
+    /* 위, 아래 15px */
+    padding: 15px 0 ;
+    text-align: center;
+    color: #fff;
+    /* 버튼모서리를 둥글게 만들기 위해 */
+    border: 1px solid #15c654;
+    border-radius: 2px;
+
+    background-color: #19ce60;
+
+    
+
+
+}
+
+.ico_naver.background {
+
+    display: inline-block;
+    width: 60px;
+    height: 12px;
+    margin: 2px 5px 0 0;
+    vertical-align: top;
+    background-position: -270px -276px;
+}
+
+.sub_area {
+
+    margin: 14px 8px 0 4px;
+}
+
+.sub_area:after {
+
+    /* div sub_area 안에 왼쪽, 오른쪽 정렬한 float 요소들을
+    div 안으로 넣기 위한 조치 
+    */
+    /* blind 처럼 인위적으로 만든 것 같음  */
+    /* float 로 설정한 요소를 div 안에 넣으려고 한 듯  */
+    /* 밑에 공간 띄워줄려고 */
+    display: table;
+    /* float 속성을 적용하지 않은 객체가 자리를 차지하기 못하게 하려고 */
+    clear: both;
+    table-layout: fixed;
+    content: '';
+}
+
+.lock_box {
+   /* 아이디, 비밀번호 찾기 왼쪽 정렬하기 위해 */
+   float: left;
+   font-size: 12px;
+}
+
+.lock_box:before {
+    
+    display: inline-block;
+    width: 10px;
+    height: 14px;
+    margin: 1px 1px 1px;
+    content: '';
+    vertical-align: top;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+    background-position: -458px -138px;
+
+    /* 아이디, 비밀번호 찾기 왼쪽 정렬하기 위해 */
+ }
+
+.link_lock {
+    color: #404040
+
+}
+
+#link_lock_password:before {
+
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    margin: 0 5px 0 2px;
+    content: '';
+    vertical-align: top;
+    vertical-align: 3px;
+    border-radius: 50%;
+    background-color: #d7dce0;
+}
+
+.link_join{
+    font-size: 12px;
+    color: #505050;
+    float: right;
+}
+
+#link_join_signup:before{
+
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    margin: 2px 5px 0 0;
+    content: '';
+    vertical-align: top;
+    background-position: -458px -207px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+
+.card_wrap {
+
+    overflow: hidden;
+    height: 47px;
+    /* nav 버튼 자리  */
+    padding-right: 67px;
+}
+
+.card_nav {
+
+    position: absolute;
+    top: 11px;
+    right: 10px;
+    overflow: hidden;
+}
+
+.btn_nav{
+    float: left;
+    border: 1px solid #e4e8eb;
+    background-color: #fff;
+    background-color: #fff;
+    
+}
+
+.btn_nav.btn_prev:before {
+
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -265px -218px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.btn_nav.btn_next:before {
+
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 7px 8px 6px;
+    content: '';
+    vertical-align: top;
+    background-position: -417px -147px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.sc_timesquare{
+
+    position: relative;
+    height: 47px;
+    margin: 12px 0;
+    letter-spacing: -.25px;
+    border: 1px solid #dae1e6;
+}
+
+.sc_shopcast {
+    width: 350px;
+    margin-top: 15px;
+
+}
+
+.sc_shopcast iframe {
+
+    width: 350px;
+    height: 1191px;
+    
+
 }

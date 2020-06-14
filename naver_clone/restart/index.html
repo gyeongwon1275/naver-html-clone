@@ -60,7 +60,7 @@
         <!-- 네이버 웨일 광고 -->
         <!-- 머리 -> header 몸통-> container 발 -> footer 로 설정 -->
         <!-- header 에는 로고, 검색창 nav 메뉴가 위치 -->
-        <div id="header">
+        <div id="header" role="banner">
             <div class="special_bg">
                 <div class="group_flex">
                     <div class="logo_area">
@@ -191,7 +191,7 @@
                                 <a href="https://land.naver.com/" class="nav">부동산</a>
                             </li>
                             <li class="nav_item">
-                                <a href="https://map.naver.com/ class="nav">지도</a>
+                                <a href="https://map.naver.com/ class=" nav">지도</a>
                             </li>
                             <li class="nav_item">
                                 <a href="https://movie.naver.com/" class="nav">영화</a>
@@ -224,7 +224,73 @@
             </div>
 
         </div>
-        <div id="container"></div>
+        <div id="container" role="main">
+
+            <div id="NM_INT_LEFT" class="column_left"></div>
+            <div id="NM_INT_RIGHT" class="column_right">
+
+                <div class="column_fix_wrap">
+
+                    <div id="account" class="sc_login">
+                        <h2 class="blind">로그인</h2>
+                        <p class="login_msg">네이버를 더 안전하고 편리하게 이용하세요</p>
+                        <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com"
+                            class="link_login"> <i class="ico_naver background">
+                                <span class="blind">네이버</span>
+                            </i>
+                            로그인
+                        </a>
+                        <div class="sub_area">
+                            <div class="lock_box">
+
+                                <a href="https://nid.naver.com/user/help.nhn?todo=idinquiry" class="link_lock">아이디</a>
+
+                                <a href="https://nid.naver.com/nidreminder.form" id="link_lock_password"
+                                    class="link_lock">
+                                    비밀번호
+                                </a>
+                            </div>
+                            <a href="https://nid.naver.com/nidregister.form?url=https%3A%2F%2Fwww.naver.com"
+                                id="link_join_signup" class="link_join">
+                                회원가입
+                            </a>
+                        </div>
+                    </div>
+                    <div id="timesquare" class="sc_timesquare">
+
+                        <h2 class="blind">타임스퀘어</h2>
+                        <div class="card_wrap">
+                            <div class="card_nav">
+                                <a href="" class="btn_nav btn_prev">
+                                    <span class="blind">이전</span>
+                                </a>
+                                <a href="" class="btn_nav btn_next">
+                                    <span class="blind">다음</span>
+                                </a>
+                            </div>
+
+                            <div id="NM_TS_ROLLING_WRAP" style="height: 100%;">
+                            <div class="eg-flick-viewport">
+                                <div class="eg-flick-camera">
+
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div id="shopcast" class="sc_shopcast">
+                        
+                        <iframe id ="shopcast_iframe" 
+                        src="https://castbox.shopping.naver.com/sb/main.nhn" 
+                        title = "쇼핑캐스트"
+                         scrolling="no"
+                        frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         <div id="footer"></div>
     </div>
     <div id="adscript"></div>
