@@ -38,7 +38,7 @@
         <div id="NM_TOP_BANNER">
             <div class="flex_area">
                 <a href="https://whale.naver.com/ko/?=main" class="link_banner">
-                    <i class="ico_naver_whale">
+                    <i class="ico_naver_whale background">
                         <span class="blind">NAVER whale</span>
                     </i>
                     <img src="https://s.pstatic.net/static/www/img/uit/2020/img_whale_banner.483e9e.png" alt="없어 ㅅㅂ"
@@ -66,7 +66,7 @@
                     <div class="logo_area">
                         <!-- 로고가 제일 중요해서 h1 으로 설정한 듯 -->
                         <h1 class="logo_default">
-                            <a href="https://www.naver.com/" class="logo_naver">
+                            <a href="https://www.naver.com/" class="logo_naver background">
                                 <!-- 시각 장애인 위한 span 
                                     때문에 클래스를 blind 로 설정함  -->
                                 <span class="blind">네이버</span>
@@ -80,13 +80,13 @@
                             네이버를 시작페이지로
                         </a>
                         <a href="https://jr.naver.com/" class="link_jrnaver">
-                            <i class="ico_jrnaver">
+                            <i class="ico_jrnaver background">
                                 <span class="blind">쥬니어네이버</span>
                             </i>
                         </a>
 
                         <a href="https://happybean.naver.com/" class="link_happybin">
-                            <i class="ico_happybin">
+                            <i class="ico_happybin background">
                                 <span class="blind">해피빈</span>
                             </i>
                         </a>
@@ -113,9 +113,9 @@
                                 <!-- type : submit 이유 => 검색어를 서버로 전달하고 검색결과 페이지로 이동시키기 위해  -->
                                 <button id="search_btn" type="submit" title="검색" class="btn_submit">
                                     <span class="blind">
-                                        검색    
+                                        검색
                                     </span>
-                                    <span class="ico_search_submit">
+                                    <span class="ico_search_submit background">
 
                                     </span>
                                 </button>
@@ -123,20 +123,106 @@
                         </form>
                         <!-- 키보드 고장나거나 없을 때 사용하기 위함 -->
                         <a id="ke_kbd_btn" href="" role="button" class="btn_keyboard" title="한글입력기 열기">
-                            <span class="ico_keyboard"></span>
-                            <p class="msg_keybord" >
+                            <span class="ico_keyboard background"></span>
+                            <p class="msg_keybord background">
                                 <span class="blind">입력도구</span>
                             </p>
 
                         </a>
 
-                    <a href="" class="btn_arw">
-                        <span class="blind">자동완성펼치기</span>
-                        <span class="ico_arr"></span>
-                    </a>
+                        <a href="" class="btn_arw">
+                            <span class="blind">자동완성펼치기</span>
+                            <span class="ico_arr background"></span>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <div id="gnb">
+
+                <div id="NM_FAVORITE" class="gnb_inner">
+
+                    <div class="group_nav">
+                        <ul class="list_nav type_fix">
+
+                            <li class="nav_item">
+                                <a href="https://mail.naver.com/" class="nav">
+                                    <i class="ico_mail background">
+                                    </i>
+                                    메일
+                                </a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">까페</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">블로그</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">지식IN</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">쇼핑</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">Pay</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://section.cafe.naver.com/" class="nav">
+                                    <i class="ico_tv background">
+                                    </i>
+                                    TV</a>
+                            </li>
+                        </ul>
+
+                        <ul class="list_nav NM_FAVORITE_LIST">
+
+
+                            <li class="nav_item">
+                                <a href="https://dict.naver.com/" class="nav">사전</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://news.naver.com/" class="nav">뉴스</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://finance.naver.com/" class="nav">증권</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://land.naver.com/" class="nav">부동산</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://map.naver.com/ class="nav">지도</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://movie.naver.com/" class="nav">영화</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://vibe.naver.com/?from=naver_main" class="nav">뮤직</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://book.naver.com/" class="nav">책</a>
+                            </li>
+                            <li class="nav_item">
+                                <a href="https://comic.naver.com/" class="nav">웹툰</a>
+                            </li>
+                        </ul>
+
+                        <a href="" role="button" class="btn_more">더보기</a>
+
+                    </div>
+
+                    <div id="rtk" class="group_keyword">
+                        <div id="NM_RTK_ROLLING_WRAP" class="keyword_area">
+                            <a href="" class="link_keyword">
+                                <i class="ico_error background"></i>
+                                <span class="keyword">검색어 필터 설정이 필요합니다</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
         <div id="container"></div>
         <div id="footer"></div>

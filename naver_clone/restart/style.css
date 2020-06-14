@@ -2,19 +2,26 @@
     box-sizing: border-box;
 }
 
-html body, form, fieldset, input, button {
+html body, form, fieldset, input, button, ul, li {
     /* 기본설정된 마진 패딩 제거 -> 브라우저간 호환위함  */
     padding: 0;
     margin: 0;
 }
 
+i {
+    font-style: unset;
+}
 input {
 /* 기본 설정된 input 사각형이 보이지 않도록 함  */
     border: 0;
     border-radius: 0;
 }
-
+ul {
+    list-style: none;
+}
 a{
+    /* a 태그 색 안쓰고 상위 요소에서 지정한 색깔 사용 */
+    color: inherit;
     text-decoration: none;
 }
 
@@ -29,6 +36,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
 
+}
+
+.background {
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
 }
 
 /* https://www.youtube.com/watch?v=aiSClJhuKMY&list=PLcqDmjxt30Rsb8Zpgbemt-NaCOjr2WIUj&index=10 */
@@ -65,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom-color: #00cbae;
     background-color: #00cbae;
 }
-.ico_naver_whale {
+.ico_naver_whale.background {
 
     /* 왼쪽 정렬하면서 다른 요소에 공간을 주기위해서  */
     float: left; 
@@ -76,11 +89,8 @@ h1, h2, h3, h4, h5, h6 {
     /* 위로 붙일려고  */
     vertical-align: top;
     /* 이미지 따로 불러오면 속도 느려져서 bundling 해서 가져옴  */
-    background-image: url("https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png");
     background-position: -276px -225px;
     /* bundle img 반복 안하려고 */
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
 .bn_m{
@@ -133,16 +143,13 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 
-.logo_naver {
+.logo_naver.background {
     /* 같은 라인에 검색창 위치해야 해서 inline-block */
     display: inline-block;
     width: 222px;
     height: 52px;
     vertical-align: top;
     background-position: 0 -161px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
 .logo_default {
@@ -193,6 +200,25 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 16px;
 
 }
+
+/* :before :after 단순 디자인을 위해 태그를 추가해야할 때 사용*/
+/* 따로 태그를 추가하지 않고 아이콘, 이미지등을 삽입할 때 사용 */
+/* 태그를 최소화하기 위해 사용  */
+/* 폼 태그와 이미지 태그(img)는 가상선택자가 적용되지 않는다.*/
+.link_set:after{
+
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin: -3px 0 0 3px;
+    content: '';
+    vertical-align: top;
+    background-position: -391px -225px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+
+}
 .link_jrnaver{
     float: left;
 }
@@ -203,7 +229,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 27px;
 }
 
-.ico_jrnaver{
+.ico_jrnaver.background{
     /* display: inline 을 안하는 이유는 크기설정이 안됨 */
     display: inline-block;
     width: 60px;
@@ -212,21 +238,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 10px;
     vertical-align: top;
     background-position: -348px -260px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
-.ico_happybin{
+.ico_happybin.background{
     display: inline-block;
     width: 34px;
     height: 11px;
     margin: 3px 3px 2px ;
     vertical-align: top;
     background-position: -253px -323px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.123161.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
 #u_skip {
@@ -317,7 +337,7 @@ green_window 박스안에서 위치 설정됨 */
     background-color: #19ce60;
 }
 
-.ico_search_submit {
+.ico_search_submit.background {
     /* 크기 설정하려고 */
     display: inline-block;
     width: 22px;
@@ -325,12 +345,9 @@ green_window 박스안에서 위치 설정됨 */
     /* 아이콘 이미지 위치설정 */
     vertical-align: top;
     background-position: -429px -172px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
-.ico_keyboard{
+.ico_keyboard.background{
 
     position: absolute;
     top: 50%;
@@ -341,12 +358,9 @@ green_window 박스안에서 위치 설정됨 */
     margin: -6px 0 0 -10px;
     vertical-align: top;
     background-position: -400px -276px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
-.msg_keybord{
+.msg_keybord.background{
 
     position: absolute;
     top: 42px;
@@ -357,9 +371,6 @@ green_window 박스안에서 위치 설정됨 */
     height: 37px;
     vertical-align: top;
     background-position: -161px -115px;
-    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
-    background-repeat: no-repeat;
-    background-size: 471px 442px;
 }
 
 
@@ -384,7 +395,7 @@ green_window 박스안에서 위치 설정됨 */
     
 }
 
-.ico_arr{
+.ico_arr.background{
 
     /* 위치 가운데로 조정  */
     position: absolute;
@@ -398,8 +409,172 @@ green_window 박스안에서 위치 설정됨 */
     height: 5px;
     vertical-align: top;
     background-position: -429px -394px;
+
+}
+
+#gnb{
+
+    /* 자체적인 컨테이닝 블록을 형성하려고 */
+    position: relative;
+
+}
+
+.gnb_inner {
+
+    position: relative;
+    width: 1130px;
+    /* display : blockd 일때 가로 가운데 정렬 */
+    margin: 0 auto;
+    /* 반시계방향 -> 위 오른쪽 아래 왼쪽 */
+    /* 세로방향 | 가로방향 */
+    /* top bottom -> 0 , left right -> 30px  */
+    padding: 0 30px;
+
+}
+
+#gnb .list_nav{
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 30px;
+    /* float 로 붕 띄워서 남은 공간을 다른 요소가 차지하게 함  */
+    /* 원래는 display : block 이라서 다른 요소가 차지하지 못함  */
+    float: left;
+    letter-spacing: -0.3px;
+    color: #000;
+}
+
+.list_nav.type_fix a  {
+    /* 메일~TV 까지만 컬러 적용 */
+    color: #03c75a;
+
+}
+
+.list_nav.NM_FAVORITE_LIST a  {
+    /* 메일~TV 까지만 컬러 적용 */
+    color: #000;
+
+}
+
+.nav_item {
+    /* li 태그를 수평으로 나란히 정렬하기 위해  */
+    float: left;
+    margin-left: 18px;
+}
+
+.ico_mail.background {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin: 3px 9px 0 0 ;
+    vertical-align: top;
+    background-position: -429px -227px;
+    
+}
+.ico_tv.background {
+    display: inline-block;
+    width: 12px;
+    height: 14px;
+    margin: 9px 2px 0 0;
+    vertical-align: top;
+    background-position: -458px -80px;
+    
+
+}
+
+.group_nav{
+
+    position: relative;
+    padding: 11px 220px 11px 0;   
+
+}
+
+.btn_more {
+    position: absolute;
+    margin-left: 10px;
+    font-size: 13px;
+    line-height: 30px;
+    float: left;
+    min-width: 70px;
+    text-align: right;
+    color: #202020;
+    margin-left: 17px;
+
+}
+
+.btn_more:after {
+
+    display: inline-block;
+    width: 11px;
+    height: 7px;
+    margin-left: 7px;
+    /*글자를 넣지 않고 이미지를 넣을거라서 빈문자열로 설정 */
+    content: '';
+    vertical-align: 2px;
+    background-position: -458px -432px;
     background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
     background-repeat: no-repeat;
     background-size: 471px 442px;
+}
 
+.group_keyword {
+
+    position: absolute;
+    top: 11px;
+    right: -35px;
+    overflow: hidden;
+    width: 210px;
+    height: 30px;
+
+}
+
+#rtk.group_keyword:after{
+
+    position: absolute;
+    top: 11px;
+    right: 0;
+    display: inline-block;
+    width: 14px;
+    height: 9px;
+    content: '';
+    vertical-align: top;
+    background-position: -389px -211px;
+    background-image: url(https://s.pstatic.net/static/www/img/uit/2020/sp_main.44265f.png);
+    background-repeat: no-repeat;
+    background-size: 471px 442px;
+}
+
+.keyword_area{
+
+    font-size: 13px;
+    line-height: 30px;
+    position: relative;
+    z-index: 1;
+    height: 30px;
+}
+
+.link_keyword{
+
+    display: inline-block;
+    width: 190px;
+    padding-right: 20px;
+
+}
+
+.ico_error.background{
+
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin: 8px 5px 0 0;
+    vertical-align: top;
+    background-position: -39px -427px;
+}
+
+.keyword {
+
+    font-size: 12px;
+    letter-spacing: -.5px;
+    text-overflow: clip;
+    color: #505050;
 }
